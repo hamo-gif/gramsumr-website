@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulike Inspired Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 50px 50px;
+            background-color: #f0f0f0;
+            margin-top: 80px;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            color: #333;
+            margin: 0 0 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .hero img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .feature img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .feature p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .scroll-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Ulike</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero" id="hero">
+        <div class="hero-text">
+            <h1>Discover Smooth Skin</h1>
+            <p>Experience the latest in IPL technology with our innovative devices. Achieve salon-quality results from the comfort of your home.</p>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Product Image">
+    </div>
+
+    <div class="features" id="features">
+        <div class="feature">
+            <img src="https://via.placeholder.com/150" alt="Feature 1">
+            <h3>Advanced Technology</h3>
+            <p>Cutting-edge IPL features for safe and effective results.</p>
+        </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/150" alt="Feature 2">
+            <h3>User-Friendly Design</h3>
+            <p>Intuitive controls for effortless use at home.</p>
+        </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/150" alt="Feature 3">
+            <h3>Proven Results</h3>
+            <p>Clinically tested for visible improvements in weeks.</p>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2025 Ulike. All Rights Reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a>
+            |
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">Top</button>
+
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
